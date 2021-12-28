@@ -1,6 +1,7 @@
 import React, {useState } from "react";
 import User from "../Components/user";
 import axios from "axios";
+import Dashboard from "../Components/DashBoard";
 
 const LoginForm = () => {
   const loginurl =
@@ -102,7 +103,8 @@ const LoginForm = () => {
           </form>
         </>
       ) : (
-        <User user={user}></User>
+       // <User user={user}></User>
+        <Dashboard token={token} codename={codename} />
       )}
     </div>
   );
